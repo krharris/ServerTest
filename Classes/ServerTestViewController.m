@@ -2,12 +2,12 @@
 //  ServerTestViewController.m
 //  ServerTest
 //
-//  Created by Blake Watters on 9/5/10.
-//  Copyright RestKit 2010. All rights reserved.
+//  Created by Kevin Harris on 2/11/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "ServerTestViewController.h"
-#import "RKTPost.h"
+#import "User.h"
 
 @interface ServerTestViewController (Private)
 - (void)loadData;
@@ -20,7 +20,6 @@
     // Load the object model via RestKit	
     RKObjectManager* objectManager = [RKObjectManager sharedManager];
     
-    //objectManager.client.baseURL = @"http://emptyapp.herokuapp.com/";
     //objectManager.client.baseURL = @"http://0.0.0.0:3000/";
     
     [objectManager loadObjectsAtResourcePath:@"/users/list.json" delegate:self block:^(RKObjectLoader* loader) {
@@ -28,7 +27,7 @@
         // to user the appropriate object mapping
         if ([objectManager.acceptMIMEType isEqualToString:RKMIMETypeJSON])
         {
-            loader.objectMapping = [objectManager.mappingProvider objectMappingForClass:[RKTPost class]];
+            loader.objectMapping = [objectManager.mappingProvider objectMappingForClass:[User class]];
         }
     }];
 }
@@ -38,7 +37,7 @@
     [super loadView];
 	
 	// Setup View and Table View	
-	self.title = @"Posts";
+	self.title = @"Users";
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleBlackTranslucent;
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 	self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loadPosts)] autorelease];

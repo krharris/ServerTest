@@ -2,8 +2,8 @@
 //  ServerTestAppDelegate.h
 //  ServerTest
 //
-//  Created by Blake Watters on 9/5/10.
-//  Copyright Two Toasters 2010. All rights reserved.
+//  Created by Kevin Harris on 2/11/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

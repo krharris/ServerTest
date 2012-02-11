@@ -1,14 +1,14 @@
 //
-//  RKTPost.m
+//  User.m
 //  ServerTest
 //
-//  Created by Blake Watters on 9/5/10.
-//  Copyright 2010 Two Toasters. All rights reserved.
+//  Created by Kevin Harris on 2/11/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "RKTPost.h"
+#import "User.h"
 
-@implementation RKTPost
+@implementation User
 
 @synthesize statusID = _statusID;
 @synthesize createdAt = _createdAt;

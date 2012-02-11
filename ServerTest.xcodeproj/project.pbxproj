@@ -13,7 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		250CA69A147D8FCC0047D347 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250CA699147D8FCC0047D347 /* Security.framework */; };
 		250CA69C147D8FFD0047D347 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2538E864123424F000ACB5D7 /* CoreData.framework */; };
-		2538E814123419EC00ACB5D7 /* RKTPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538E813123419EC00ACB5D7 /* RKTPost.m */; };
+		2538E814123419EC00ACB5D7 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538E813123419EC00ACB5D7 /* User.m */; };
 		2538E8671234250100ACB5D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2538E8661234250100ACB5D7 /* SystemConfiguration.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* ServerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ServerTestViewController.m */; };
@@ -74,8 +74,8 @@
 		1D6058910D05DD3D006BFB54 /* ServerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		250CA699147D8FCC0047D347 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		2538E812123419EC00ACB5D7 /* RKTPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKTPost.h; sourceTree = "<group>"; };
-		2538E813123419EC00ACB5D7 /* RKTPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKTPost.m; sourceTree = "<group>"; };
+		2538E812123419EC00ACB5D7 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2538E813123419EC00ACB5D7 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2538E864123424F000ACB5D7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2538E8661234250100ACB5D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,12 +120,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E7B9A7A114E733290034F596 /* Models */,
 				1D3623240D0F684500981E51 /* ServerTestAppDelegate.h */,
 				1D3623250D0F684500981E51 /* ServerTestAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* ServerTestViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* ServerTestViewController.m */,
-				2538E812123419EC00ACB5D7 /* RKTPost.h */,
-				2538E813123419EC00ACB5D7 /* RKTPost.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -199,6 +198,15 @@
 				E799BC3014D313160071AA31 /* RestKitFrameworkTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E7B9A7A114E733290034F596 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2538E812123419EC00ACB5D7 /* User.h */,
+				2538E813123419EC00ACB5D7 /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +318,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* ServerTestAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* ServerTestViewController.m in Sources */,
-				2538E814123419EC00ACB5D7 /* RKTPost.m in Sources */,
+				2538E814123419EC00ACB5D7 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

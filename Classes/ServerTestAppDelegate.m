@@ -2,14 +2,14 @@
 //  ServerTestAppDelegate.m
 //  ServerTest
 //
-//  Created by Blake Watters on 9/5/10.
-//  Copyright Two Toasters 2010. All rights reserved.
+//  Created by Kevin Harris on 2/11/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <RestKit/RestKit.h>
 #import "ServerTestAppDelegate.h"
 #import "ServerTestViewController.h"
-#import "RKTPost.h"
+#import "User.h"
 
 @implementation ServerTestAppDelegate
 
@@ -21,13 +21,13 @@
     RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
 
     // Initialize RestKit
-	//RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://emptyapp.herokuapp.com/"];
-    RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://0.0.0.0:3000"];
+    //RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://0.0.0.0:3000"];
+    RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://floating-sunset-9026.herokuapp.com/"];
     
     // Enable automatic network activity indicator management
     objectManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
     
-    RKObjectMapping* postMapping = [RKObjectMapping mappingForClass:[RKTPost class]];
+    RKObjectMapping* postMapping = [RKObjectMapping mappingForClass:[User class]];
     [postMapping mapKeyPathsToAttributes:@"id", @"statusID",
                                          @"created_at", @"createdAt",
                                          @"name", @"name",

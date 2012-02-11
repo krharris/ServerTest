@@ -1,12 +1,12 @@
 //
-//  RKTPost.h
+//  User.h
 //  ServerTest
 //
-//  Created by Blake Watters on 9/5/10.
-//  Copyright 2010 Two Toasters. All rights reserved.
+//  Created by Kevin Harris on 2/11/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-@interface RKTPost : NSObject
+@interface User : NSObject
 {
 	NSNumber* _statusID;
 	NSDate* _createdAt;
